@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div  style="margin-left:200px;margin-right:200px;">
+        <b>
+            快速傅里叶变换（FFT）算法能大大减少计算离散傅里叶变换所需要的乘法次数，对于M个抽样点，通常需要M^2次计算，但是快速傅里叶变换只需要M*log(M)次计算。图片抽样点越多，FFT算法计算量的节省就越显著。我们先对图像进行快速傅里叶变换，绘制出图像的频谱图，再通过逆变换还原图像，并计算还原图片和原始图片之差的图像，以及计算差的绝对值的最大值。由于频谱范围不在0-255之间，我们通过变换T(x)=clip(20*log(||x||+1),0,255),将其映射到0-255的空间中，再用灰度图片可视化。
+        </b>
+    </div>
+    <br>
+    
+        <div style="margin-left:200px;margin-right:200px;">
+            <form method="post" action="{{url_for('FFT')}}" enctype="multipart/form-data">
+                1. 请选择上传图像类型：
+                <select name="mode" style='font-size:20px'>
+                    <option value='gray'>gray image</option>
+                    <option value='color'>color image</option>
+                </select><br><br>
+                2. 请选择需要处理的图像：
+                <input type="file" size="40" name="photo"/><br>
+                3. 请点击以确认上传图像进行处理：
+                <input type="submit" value="upload the image" class="button-new" style="margin-top:15px;"/><br>
+            </form>
+            4. 处理结果：<br>
+        </div>
+        
+    <center>
+        <img src="{{dir_result}}"  alt="result" />
+        <div>
+            其它作业入口：<br>
+            <form method="post" action="{{ url_for('HistEq') }}">
+            <input type="submit" value="作业1: 直方图均衡化" class="button-new" style="margin:10px;width:300px;height:30px"/>
+            </form>
+            
+            <form method="post" action="{{ url_for('FFT') }}">
+            <input type="submit" value="作业2: 快速傅里叶变换" class="button-new" style="margin:10px;width:300px;height:30px"/>
+            </form>
+    
+            <form method="post" action="{{ url_for('GLPF') }}">
+            <input type="submit" value="作业3: 高斯低通滤波器" class="button-new" style="margin:10px;width:300px;height:30px"/>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIP homework</title>
+</head>
+<style>
+    *{ margin: 0; padding: 0; }
+    body{ font-size: 50px; } /*去掉这个设置就是正常的*/
+    .head{ height: 70px; 
+        background: lightblue;
+    }
+    b{ font-size: 30px; 
+    }
+</style>
+<body>
+    <center>
+        <div>
+            数字图像处理作业入口：<br>
+            <form method="post" action="{{ url_for('HistEq') }}">
+            <input type="submit" value="作业1: 直方图均衡化" class="button-new" style="margin:30px;width:300px;height:70px;font-size:26px;"/>
+            </form>
+            
+            <form method="post" action="{{ url_for('FFT') }}">
+            <input type="submit" value="作业2: 快速傅里叶变换" class="button-new" style="margin:30px;width:300px;height:70px;font-size:26px;"/>
+            </form>
+    
+            <form method="post" action="{{ url_for('GLPF') }}">
+            <input type="submit" value="作业3: 高斯低通滤波器" class="button-new" style="margin:30px;width:300px;height:70px;font-size:26px;"/>
+            </form>
+        </div>
+    </center>
+    
+</body>
+</html>
