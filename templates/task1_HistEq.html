@@ -8,6 +8,7 @@
     <div  style="margin-left:200px;margin-right:200px;">
         <b>
             直方图均衡化的思想是，对图像中像素个数多的灰度级进行展宽，而对像素个数少的灰度级进行缩减，使原图像的各灰度尽可能均匀分布地在整个灰度空间中，从而达到清晰图像的目的。
+            直方图均衡化本质上是对图像做的非线性拉伸变换，通过重新分配图像像素值使像素值分布更均匀，从而达到清晰图像的目的。
         </b>
     </div>
     <br>
@@ -35,12 +36,12 @@
             <input type="submit" value="作业1: 直方图均衡化" class="button-new" style="margin:10px;width:300px;height:30px"/>
             </form>
             
-            <form method="post" action="{{ url_for('FFT') }}">
-            <input type="submit" value="作业2: 快速傅里叶变换" class="button-new" style="margin:10px;width:300px;height:30px"/>
+            <form method="post" action="{{ url_for('Morph') }}">
+            <input type="submit" value="作业2: 形态学图像处理" class="button-new" style="margin:10px;width:300px;height:30px"/>
             </form>
     
-            <form method="post" action="{{ url_for('GLPF') }}">
-            <input type="submit" value="作业3: 高斯低通滤波器" class="button-new" style="margin:10px;width:300px;height:30px"/>
+            <form method="post" action="{{ url_for('Sharpen') }}">
+            <input type="submit" value="作业3: 锐化滤波器" class="button-new" style="margin:10px;width:300px;height:30px"/>
             </form>
         </div>
     </center>
