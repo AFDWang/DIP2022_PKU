@@ -1,7 +1,6 @@
 # DIP2022_PKU
 Class project of PKU Digital Image Processing 2022.
 
------
 ## Directory
 
 - HistEq.py: HistEq Algorithm
@@ -22,7 +21,6 @@ Class project of PKU Digital Image Processing 2022.
 - templates: html templates for website
 
 
------
 
 ## Environment Setup
 ```shell
@@ -32,7 +30,6 @@ cd DIP2022_PKU
 pip install -r requirements.txt
 ```
 
------
 ## Usage
 
 ### Run Source Code
@@ -52,7 +49,6 @@ To run all tasks with all images, please run following scripts:
 sh scripts/run_all.sh
 ```
 
------
 ### Run Demo
 To run demo app in website, please run following scripts:
 ```shell
